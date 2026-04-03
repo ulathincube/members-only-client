@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = '/api/messages';
+const baseUrl = `${import.meta.env.VITE_API_URL}/api/messages`;
 
 async function getMessages() {
   const response = await axios.get(baseUrl);
