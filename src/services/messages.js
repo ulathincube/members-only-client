@@ -1,16 +1,14 @@
-import axios from 'axios';
-
-const baseUrl = `${import.meta.env.VITE_API_URL}/api/messages`;
+import axios from '../utils/axios';
 
 async function getMessages() {
-  const response = await axios.get(baseUrl);
+  const response = await axios.get('/messages');
 
   return response.data;
 }
 
 async function createMessage(messageData) {
   const { author, message } = messageData;
-  const response = await axios.post(baseUrl, {
+  const response = await axios.post('/messages', {
     author,
     message,
   });
@@ -18,10 +16,4 @@ async function createMessage(messageData) {
   return response.data;
 }
 
-async function getMessagesByUser(userId) {
-  const response = await axios.get(`${baseUrl}/users/${userId}`);
-
-  return response.data;
-}
-
-export default { getMessages, createMessage, getMessagesByUser };
+export default { getMessages, createMessage };
