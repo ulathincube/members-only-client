@@ -1,0 +1,23 @@
+.primary {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+.secondary {
+  font-weight: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.tertiary {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.quartenary {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}

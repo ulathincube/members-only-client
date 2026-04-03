@@ -1,0 +1,5 @@
+.messages {
+  border: 0.1rem solid var(--text-color-dark);
+  max-width: 50%;
+  padding: 3rem;
+}

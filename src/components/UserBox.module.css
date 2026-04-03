@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  gap: 5rem;
+  border: 0.1rem solid var(--text-color-dark);
+  border-radius: 0.25rem;
+  max-width: 50%;
+  margin-bottom: 3.5rem;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50rem;
+  background-color: var(--text-color-dark);
+}

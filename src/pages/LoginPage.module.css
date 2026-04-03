@@ -1,0 +1,7 @@
+.link {
+  margin-top: 3rem;
+  color: var(--alternate-color);
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}

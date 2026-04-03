@@ -1,0 +1,41 @@
+.new-message {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 50%; */
+  gap: 2rem;
+  margin-bottom: 3rem;
+  /* min-height: 9rem; */
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30%;
+}
+
+.message {
+  resize: none;
+  padding: 0.5rem;
+  min-height: 10rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+label {
+  font-weight: 600;
+}
+
+@media (max-width: 56.25em) {
+  .new-message {
+    margin-left: 2.5rem;
+  }
+
+  .group {
+    width: 100%;
+  }
+
+  .message {
+    width: 90%;
+  }
+}

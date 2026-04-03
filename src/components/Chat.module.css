@@ -1,0 +1,35 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--background-color);
+  border: 0.1rem solid var(--background-color-darker);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  /* width: fit-content; */
+  list-style: none;
+}
+
+.author {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.time {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--text-color-lighter);
+  /* text-align: right; */
+  /* color: var(--text-color-dark); */
+}
+
+.message {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--text-color-lighter);
+}

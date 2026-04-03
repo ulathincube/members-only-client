@@ -1,0 +1,18 @@
+.greeting {
+  margin-bottom: 2rem;
+}
+
+.greet {
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+@media (max-width: 56.25em) {
+  .greeting {
+    margin-left: 2.5rem;
+  }
+}

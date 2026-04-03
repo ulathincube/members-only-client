@@ -1,0 +1,41 @@
+.header {
+  /* padding-top: 5rem; */
+  padding-bottom: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.item {
+  font-weight: 500;
+}
+
+.link,
+.logo {
+  text-decoration: none;
+  color: var(--alternate-color);
+}
+
+@media (max-width: 56.25em) {
+  .nav {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .header {
+    justify-content: center;
+  }
+}

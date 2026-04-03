@@ -1,0 +1,36 @@
+.hero {
+  text-align: center;
+}
+
+.hook {
+  font-weight: 800;
+  font-size: 7rem;
+}
+
+.byline {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+.links {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  padding: 1.5rem 3.5rem;
+  color: var(--text-color-dark);
+  border: 0.1rem solid currentColor;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.action {
+  text-decoration: none;
+  font-size: 3rem;
+  background-color: var(--text-color-dark);
+  color: var(--text-color-light);
+  padding: 1.5rem 3rem;
+  display: inline-block;
+}
