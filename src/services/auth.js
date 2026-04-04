@@ -2,7 +2,7 @@ import axios from '../utils/axios';
 
 async function login(email, password) {
   try {
-    const response = await axios.post('/login', { email, password });
+    const response = await axios.post('/auth/login', { email, password });
 
     return response.data;
   } catch (error) {
@@ -12,7 +12,7 @@ async function login(email, password) {
 
 async function logout() {
   try {
-    await axios.post('/logout');
+    await axios.post('/auth/logout');
   } catch (error) {
     if (error instanceof Error) throw error;
   }
@@ -20,7 +20,7 @@ async function logout() {
 
 async function verifyMember(passphrase) {
   try {
-    const response = await axios.post('/verify', {
+    const response = await axios.post('/auth/verify', {
       passphrase,
     });
 
