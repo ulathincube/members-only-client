@@ -1,4 +1,4 @@
-import axios from '../utils/axios';
+import axios from 'axios';
 
 async function getMessages() {
   const response = await axios.get('/messages');

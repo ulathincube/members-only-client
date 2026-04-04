@@ -1,4 +1,4 @@
-import axios from '../utils/axios';
+import axios from 'axios';
 
 async function createUser(userData) {
   const { firstName, lastName, email, password } = userData;
