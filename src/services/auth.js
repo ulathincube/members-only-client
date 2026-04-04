@@ -2,7 +2,11 @@ import axios from '../utils/axios';
 
 async function login(email, password) {
   try {
-    const response = await axios.post('/auth/login', { email, password });
+    const response = await axios.post(
+      '/auth/login',
+      { email, password },
+      { withCredentials: true },
+    );
 
     return response.data;
   } catch (error) {
