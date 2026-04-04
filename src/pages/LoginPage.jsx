@@ -13,7 +13,7 @@ function LoginPage() {
   if (loggedInUser) {
     const { membership_status } = loggedInUser;
 
-    if (membership_status === 'pending') return <Navigate to='/verify' />;
+    if (membership_status === 'unverified') return <Navigate to='/verify' />;
     if (membership_status === 'verified') return <Navigate to='/messages' />;
   } else
     return (

@@ -6,15 +6,15 @@ function Protected() {
 
   const authenticatedUser = user.user;
 
- 
-
   // const { membership_status: status } = authenticatedUser;
 
   // console.log({ authenticatedUser, status });
 
   if (!authenticatedUser) return <Navigate to='/login' />;
-  if (authenticatedUser.membership_status !== 'verified')
+  if (authenticatedUser.membership_status !== 'verified') {
     return <Navigate to='/verify' />;
+  }
+
   return <Outlet />;
 }
 

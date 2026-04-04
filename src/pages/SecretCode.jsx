@@ -20,10 +20,10 @@ function SecretCode() {
 
     if (verified) {
       onUpdateNotification('You are now verified!');
-      return navigate('/messages');
+      navigate('/messages');
     } else {
       onUpdateNotification('Incorrect Password. Try again!');
-      return navigate('/verify');
+      navigate('/verify');
     }
 
     // if verified ==>
