@@ -3,11 +3,15 @@ import axios from 'axios';
 const baseUrl = import.meta.env.VITE_API_URL;
 
 async function getMessages() {
-  const response = await axios.get(`${baseUrl}/messages`, null, {
-    withCredentials: true,
-  });
+  try {
+    const response = await axios.get(`${baseUrl}/messages`, null, {
+      withCredentials: true,
+    });
 
-  return response.data;
+    return response.data;
+  } catch (error) {
+    if (error) throw error;
+  }
 }
 
 async function createMessage(messageData) {
