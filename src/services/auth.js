@@ -1,9 +1,10 @@
 import axios from 'axios';
+const baseUrl = import.meta.env.VITE_API_URL;
 
 async function login(email, password) {
   try {
     const response = await axios.post(
-      '/auth/login',
+      `${baseUrl}/auth/login`,
       { email, password },
       { withCredentials: true },
     );
@@ -16,7 +17,7 @@ async function login(email, password) {
 
 async function logout() {
   try {
-    await axios.post('/auth/logout');
+    await axios.post(`${baseUrl}/auth/logout`);
   } catch (error) {
     if (error instanceof Error) throw error;
   }
@@ -24,7 +25,7 @@ async function logout() {
 
 async function verifyMember(passphrase) {
   try {
-    const response = await axios.post('/auth/verify', {
+    const response = await axios.post(`${baseUrl}/auth/verify`, {
       passphrase,
     });
 
