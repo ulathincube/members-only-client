@@ -142,7 +142,7 @@ function Login({ onToggle, show }) {
         const userData = { user: loggedInUser, authenticated: true };
         window.localStorage.setItem('user', JSON.stringify(userData));
         onUserChange(userData);
-        return navigate('/messages');
+        // return navigate('/messages');
       }
     } catch (error) {
       onUpdateNotification('Incorrect username or password');

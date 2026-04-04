@@ -9,7 +9,6 @@ import Greeting from '../components/Greeting';
 import { useNavigate } from 'react-router';
 import Header from '../components/Header';
 
-
 function Messages() {
   const { user } = useAuth();
 
