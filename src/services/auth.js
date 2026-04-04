@@ -17,7 +17,9 @@ async function login(email, password) {
 
 async function logout() {
   try {
-    await axios.post(`${baseUrl}/auth/logout`);
+    await axios.post(`${baseUrl}/auth/logout`, null, {
+      withCredentials: true,
+    });
   } catch (error) {
     if (error instanceof Error) throw error;
   }
@@ -25,9 +27,15 @@ async function logout() {
 
 async function verifyMember(passphrase) {
   try {
-    const response = await axios.post(`${baseUrl}/auth/verify`, {
-      passphrase,
-    });
+    const response = await axios.post(
+      `${baseUrl}/auth/verify`,
+      {
+        passphrase,
+      },
+      {
+        withCredentials: true,
+      },
+    );
 
     return response.data;
   } catch (error) {
