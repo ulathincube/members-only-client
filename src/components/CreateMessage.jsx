@@ -12,11 +12,8 @@ function CreateMessage() {
 
   const newMessageMutation = useMutation({
     mutationFn: messageServices.createMessage,
-    onSuccess: newMessage => {
-      console.log({ newMessage });
-      const allMessages = queryClient.getQueryData(['messages']);
-      queryClient.setQueryData(['messages'], allMessages.concat(newMessage));
-      // queryClient.invalidateQueries(['messages']);
+    onSuccess: () => {
+      queryClient.invalidateQueries(['messages']);
     },
   });
 
