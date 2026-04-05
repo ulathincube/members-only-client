@@ -29,13 +29,9 @@
 }
 
 @media (max-width: 56.25em) {
-  .nav {
-    display: none;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
   .header {
+    gap: 1rem;
+    flex-direction: column;
     justify-content: center;
   }
 }
