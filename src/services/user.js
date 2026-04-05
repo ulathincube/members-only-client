@@ -28,7 +28,7 @@ async function createUser(userData) {
 
 async function getAllUsers() {
   try {
-    const response = await fetch(`${baseUrl}/messages`, {
+    const response = await fetch(`${baseUrl}/users`, {
       method: 'GET',
       credentials: 'include',
     });

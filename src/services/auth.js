@@ -1,10 +1,8 @@
-// const baseUrl = import.meta.env.VITE_API_URL;
-
-const baseUrl = '/api/auth';
+const baseUrl = import.meta.env.VITE_API_URL;
 
 async function login(email, password) {
   try {
-    const response = await fetch(`${baseUrl}/login`, {
+    const response = await fetch(`${baseUrl}/auth/login`, {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -23,7 +21,7 @@ async function login(email, password) {
 
 async function logout() {
   try {
-    const response = await fetch(`${baseUrl}/logout`, {
+    const response = await fetch(`${baseUrl}/auth/logout`, {
       method: 'POST',
       credentials: 'include',
       headers: {
