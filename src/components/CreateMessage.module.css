@@ -7,6 +7,11 @@
   /* min-height: 9rem; */
 }
 
+.label {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
 .group {
   display: flex;
   flex-direction: column;
@@ -22,27 +27,25 @@
   border: none;
 }
 
-label {
-  font-weight: 600;
-}
-
 @media (max-width: 56.25em) {
-  .new-message {
-    margin-left: 2.5rem;
-  }
-
   .group {
     width: 100%;
   }
 
+  .label {
+    font-size: 2.3rem;
+  }
+
   .message {
-    width: 90%;
+    width: 100%;
   }
 
   .action {
     button {
       width: 100%;
       padding: 2rem;
+      font-weight: 700;
+      font-size: 2.5rem;
     }
   }
 }

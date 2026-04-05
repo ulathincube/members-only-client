@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 0.5rem;
   background-color: var(--background-color);
-  border: 0.2rem solid var(--background-color-darker);
+  border: 0.25rem solid var(--background-color-darker);
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   /* width: fit-content; */
@@ -36,9 +36,8 @@
 
 @media (max-width: 56.25em) {
   .chat {
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 1rem;
-    border: 0.5rem solid var(--background-color-darker);
   }
 
   .author {

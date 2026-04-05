@@ -44,7 +44,9 @@ function CreateMessage() {
   return (
     <form className={styles['new-message']} onSubmit={onSubmitMessageHandler}>
       <div className={styles.group}>
-        <label htmlFor='message'>Send A Message</label>
+        <label className={styles.label} htmlFor='message'>
+          Send A Message
+        </label>
         <textarea
           className={styles.message}
           id='message'
