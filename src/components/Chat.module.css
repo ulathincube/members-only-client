@@ -36,18 +36,20 @@
 
 @media (max-width: 56.25em) {
   .chat {
-    padding: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 0.5rem solid var(--background-color-darker);
   }
 
   .author {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
 
   .message {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .time {
-    font-size: 1.2rem;
+    font-weight: 700;
   }
 }
