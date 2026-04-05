@@ -1,15 +1,19 @@
-import axios from 'axios';
 const baseUrl = import.meta.env.VITE_API_URL;
 
 async function login(email, password) {
   try {
-    const response = await axios.post(
-      `${baseUrl}/auth/login`,
-      { email, password },
-      { withCredentials: true },
-    );
+    const response = await fetch(`${baseUrl}/auth/login`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
 
-    return response.data;
+    if (!response.ok) throw new Error('Failed to send loginData');
+
+    return await response.json();
   } catch (error) {
     if (error instanceof Error) throw error;
   }
@@ -17,9 +21,17 @@ async function login(email, password) {
 
 async function logout() {
   try {
-    await axios.post(`${baseUrl}/auth/logout`, null, {
-      withCredentials: true,
+    const response = await fetch(`${baseUrl}/auth/logout`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
+
+    if (!response.ok) throw new Error('Failed to log out!');
+
+    return await response.json();
   } catch (error) {
     if (error instanceof Error) throw error;
   }
@@ -27,17 +39,18 @@ async function logout() {
 
 async function verifyMember(passphrase) {
   try {
-    const response = await axios.post(
-      `${baseUrl}/auth/verify`,
-      {
-        passphrase,
+    const response = await fetch(`${baseUrl}/auth/verify`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      {
-        withCredentials: true,
-      },
-    );
+      body: JSON.stringify({ passphrase }),
+    });
 
-    return response.data;
+    if (!response.ok) throw new Error('Failed to post verify password');
+
+    return await response.json();
   } catch (error) {
     if (error instanceof Error) throw error;
   }

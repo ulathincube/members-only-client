@@ -1,32 +1,41 @@
-import axios from 'axios';
-
 const baseUrl = import.meta.env.VITE_API_URL;
 
 async function createUser(userData) {
   const { firstName, lastName, email, password } = userData;
 
-  const response = await axios.post(
-    `${baseUrl}/users`,
-    {
-      firstName,
-      lastName,
-      email,
-      password,
-    },
-    {
-      withCredentials: true,
-    },
-  );
+  try {
+    const response = await fetch(`${baseUrl}/users`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+      }),
+    });
 
-  return response.data;
+    if (!response.ok) throw new Error('Failed to create a new user!');
+
+    return await response.json();
+  } catch (error) {
+    if (error) throw error;
+  }
 }
 
 async function getAllUsers() {
   try {
-    const response = await axios.get(`${baseUrl}/users`, null, {
-      withCredentials: true,
+    const response = await fetch(`${baseUrl}/messages`, {
+      method: 'GET',
+      credentials: 'include',
     });
-    return response.data;
+
+    if (!response.ok) throw new Error('Failed to get all users!');
+
+    return await response.json();
   } catch (error) {
     if (error) throw error;
   }
