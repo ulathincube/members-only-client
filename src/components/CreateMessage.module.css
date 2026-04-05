@@ -38,6 +38,7 @@
 
   .message {
     width: 100%;
+    min-height: 15rem;
   }
 
   .action {
