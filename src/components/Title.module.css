@@ -21,3 +21,17 @@
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 56.25em) {
+  .primary,
+  .secondary,
+  .tertiary,
+  .quartenary {
+    text-align: center;
+  }
+
+  .secondary {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+}

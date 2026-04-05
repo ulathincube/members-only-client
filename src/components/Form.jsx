@@ -58,7 +58,9 @@ function Register({ onToggle, show }) {
     <form className={styles.register} onSubmit={formSubmitHandler}>
       <Title title='Register a New Account' level={2} />
       <div className={styles.group}>
-        <label htmlFor='firstName'>FirstName</label>
+        <label className={styles.label} htmlFor='firstName'>
+          FirstName
+        </label>
         <input
           type='text'
           name='firstName'

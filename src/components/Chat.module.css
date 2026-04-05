@@ -3,15 +3,15 @@
   flex-direction: column;
   gap: 0.5rem;
   background-color: var(--background-color);
-  border: 0.1rem solid var(--background-color-darker);
+  border: 0.2rem solid var(--background-color-darker);
   padding: 0.5rem 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   /* width: fit-content; */
   list-style: none;
 }
 
 .author {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 2rem;
 }
 
@@ -32,4 +32,22 @@
   font-weight: 400;
   font-size: 1.8rem;
   color: var(--text-color-lighter);
+}
+
+@media (max-width: 56.25em) {
+  .chat {
+    padding: 0.25rem;
+  }
+
+  .author {
+    font-size: 1.75rem;
+  }
+
+  .message {
+    font-size: 1.6rem;
+  }
+
+  .time {
+    font-size: 1.2rem;
+  }
 }

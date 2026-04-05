@@ -1,8 +1,10 @@
-const baseUrl = import.meta.env.VITE_API_URL;
+// const baseUrl = import.meta.env.VITE_API_URL;
+
+const baseUrl = '/api/messages';
 
 async function getMessages() {
   try {
-    const response = await fetch(`${baseUrl}/messages`, {
+    const response = await fetch(baseUrl, {
       method: 'GET',
       credentials: 'include',
     });
@@ -18,7 +20,7 @@ async function getMessages() {
 async function createMessage(messageData) {
   const { author, message } = messageData;
   try {
-    const response = await fetch(`${baseUrl}/messages`, {
+    const response = await fetch(baseUrl, {
       method: 'POST',
       credentials: 'include',
       headers: {

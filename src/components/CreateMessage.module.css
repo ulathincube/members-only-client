@@ -38,4 +38,11 @@ label {
   .message {
     width: 90%;
   }
+
+  .action {
+    button {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
 }

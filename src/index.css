@@ -41,6 +41,7 @@ body {
   font-size: 1.8rem;
   /* 5.2 Change font */
   font-family: 'Google Sans', sans-serif;
+  padding-bottom: 3rem;
 }
 
 /* 6. Improve media defaults */
@@ -114,14 +115,14 @@ ol {
   --text-color-lighter: hsl(200 10% 25%);
   --text-color-light: hsl(200 15% 90%);
   --alternate-color: hsl(35 100% 45%);
-  --background-color: hsl(220 90% 90%);
-  --background-color-darker: hsl(220 90% 80%);
+  --background-color: hsl(220 30% 95%);
+  --background-color-darker: hsl(220 80% 80%);
 }
 
 @media (max-width: 56.25em) {
   body {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
