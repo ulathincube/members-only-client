@@ -7,12 +7,14 @@ import Button from '../components/Button';
 import Header from '../components/Header';
 import Notification from '../components/Notification';
 import useNotification from '../hooks/useNotification';
+import useAuth from '../hooks/useAuth';
 
 function SecretCode() {
   const [passphrase, setPassphrase] = useState('');
   const navigate = useNavigate();
 
   const { onUpdateNotification } = useNotification();
+  const { user, onUserChange } = useAuth();
 
   const onSubmitHandler = async event => {
     event.preventDefault();
@@ -20,6 +22,8 @@ function SecretCode() {
 
     if (verified) {
       onUpdateNotification('You are now verified!');
+      const verifiedUser = { ...user, membership_status: 'verified' };
+      onUserChange(verifiedUser);
       navigate('/messages');
     } else {
       onUpdateNotification('Incorrect Password. Try again!');
@@ -39,7 +43,9 @@ function SecretCode() {
       />
       <form className={styles.form} onSubmit={onSubmitHandler}>
         <div className={styles.group}>
-          <label htmlFor='passphrase'>Passphrase</label>
+          <label className={styles.label} htmlFor='passphrase'>
+            Passphrase
+          </label>
           <input
             type='password'
             name='passphrase'
@@ -48,7 +54,7 @@ function SecretCode() {
             onChange={({ target }) => setPassphrase(target.value)}
           />
         </div>
-        <div>
+        <div className={styles.action}>
           <Button type='submit'>Submit</Button>
         </div>
       </form>
