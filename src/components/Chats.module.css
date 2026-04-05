@@ -11,6 +11,10 @@
 }
 
 @media (max-width: 56.25em) {
+  .parent {
+    min-width: 100%;
+  }
+
   .chats {
     min-width: 100%;
     gap: 0.75rem;
