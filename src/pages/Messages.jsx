@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import Error from '../components/Error';
 import Greeting from '../components/Greeting';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Messages() {
   const { isPending, isError, data, error } = useQuery({
@@ -23,6 +24,7 @@ function Messages() {
       <Header />
       <Chats chatList={data} />
       <CreateMessage />
+      <Footer />
     </>
   );
 }

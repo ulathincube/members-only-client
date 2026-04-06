@@ -1,4 +1,5 @@
 const baseUrl = import.meta.env.VITE_API_URL;
+const apiUrl = '/api/auth';
 
 async function login(email, password) {
   try {

@@ -6,6 +6,8 @@ function Protected() {
 
   const authenticatedUser = user.user;
 
+  console.log('***PROTECTED***', authenticatedUser);
+
   // const { membership_status: status } = authenticatedUser;
 
   // console.log({ authenticatedUser, status });

@@ -56,7 +56,11 @@ function Register({ onToggle, show }) {
 
   return (
     <form className={styles.register} onSubmit={formSubmitHandler}>
-      <Title title='Register a New Account' level={2} />
+      <Title
+        className={styles.caption}
+        title='Register a New Account'
+        level={2}
+      />
       <div className={styles.group}>
         <label className={styles.label} htmlFor='firstName'>
           FirstName
@@ -71,7 +75,9 @@ function Register({ onToggle, show }) {
         />
       </div>
       <div className={styles.group}>
-        <label htmlFor='lastName'>LastName</label>
+        <label className={styles.label} htmlFor='lastName'>
+          LastName
+        </label>
         <input
           type='text'
           name='lastName'
@@ -82,7 +88,9 @@ function Register({ onToggle, show }) {
         />
       </div>
       <div className={styles.group}>
-        <label htmlFor='email'>Email Address</label>
+        <label className={styles.label} htmlFor='email'>
+          Email Address
+        </label>
         <input
           type='email'
           name='email'
@@ -93,7 +101,9 @@ function Register({ onToggle, show }) {
         />
       </div>
       <div className={`${styles.group} ${styles.password}`}>
-        <label htmlFor='password'>Password</label>
+        <label className={styles.label} htmlFor='password'>
+          Password
+        </label>
         <input
           ref={passwordRef}
           type={show ? 'text' : 'password'}
@@ -107,7 +117,9 @@ function Register({ onToggle, show }) {
         {/* {showPassword ? <input type='text' /> : <input type='password' />} */}
       </div>
       <div className={styles.group}>
-        <label htmlFor='confirm-password'>Confirm Password</label>
+        <label className={styles.label} htmlFor='confirm-password'>
+          Confirm Password
+        </label>
         <input
           type='password'
           id='confirm-password'
@@ -144,7 +156,7 @@ function Login({ onToggle, show }) {
         const userData = { user: loggedInUser, authenticated: true };
         window.localStorage.setItem('user', JSON.stringify(userData));
         onUserChange(userData);
-        // return navigate('/messages');
+        return navigate('/messages');
       }
     } catch (error) {
       onUpdateNotification('Incorrect username or password');
@@ -159,7 +171,9 @@ function Login({ onToggle, show }) {
     <form className={styles.login} onSubmit={formSubmitHandler}>
       <Title title='Log In' level={2} />
       <div className={styles.group}>
-        <label htmlFor='email'>Email Address</label>
+        <label className={styles.label} htmlFor='email'>
+          Email Address
+        </label>
         <input
           type='email'
           name='email'
@@ -170,7 +184,9 @@ function Login({ onToggle, show }) {
         />
       </div>
       <div className={`${styles.group} ${styles.password}`}>
-        <label htmlFor='password'>Password</label>
+        <label className={styles.label} htmlFor='password'>
+          Password
+        </label>
         <input
           type={show ? 'text' : 'password'}
           name='password'

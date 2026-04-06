@@ -4,6 +4,7 @@ import useAuth from '../hooks/useAuth';
 import Header from '../components/Header';
 import styles from './LoginPage.module.css';
 import Notification from '../components/Notification';
+import Footer from '../components/Footer';
 
 function LoginPage() {
   const { user } = useAuth();
@@ -24,6 +25,7 @@ function LoginPage() {
         <Link className={styles.link} to='/register'>
           No account? Register here!
         </Link>
+        <Footer />
       </>
     );
 }

@@ -1,0 +1,29 @@
+.footer {
+  color: var(--text-color-dark);
+  display: flex;
+  justify-content: space-between;
+  justify-self: flex-end;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--alternate-color);
+  padding: 2.5rem;
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+.link {
+  color: var(--text-color-dark);
+  text-decoration: none;
+}

@@ -35,13 +35,12 @@ body {
   min-height: 100vh;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   /* 5.1 Use rem sizing  */
   font-size: 1.8rem;
   /* 5.2 Change font */
   font-family: 'Google Sans', sans-serif;
-  padding-bottom: 3rem;
 }
 
 /* 6. Improve media defaults */

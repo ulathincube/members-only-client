@@ -2,6 +2,11 @@
   position: relative;
 }
 
+.label {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
 .parent {
   display: flex;
   justify-self: stretch;
@@ -66,13 +71,18 @@ input {
     min-width: 100%;
   }
 
+  .caption {
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
   .login,
   .register {
     gap: 2rem;
   }
 
-  label {
-    font-size: 2.5rem;
+  .label {
+    font-size: 2.2rem;
   }
 
   .action {
